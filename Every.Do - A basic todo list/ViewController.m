@@ -60,9 +60,11 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    DetailViewController *detailViewController = (DetailViewController*)segue.destinationViewController;
     
+    if ([segue.identifier containsString:@"detailSegue"]) {
+    DetailViewController *detailViewController = (DetailViewController*)segue.destinationViewController;
     detailViewController.todo = sender;
+    }
     
 }
 

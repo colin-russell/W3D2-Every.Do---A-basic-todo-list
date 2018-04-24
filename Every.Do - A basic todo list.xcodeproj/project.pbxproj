@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B11ED0B208FC73F00D97307 /* AddTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11ED0A208FC73F00D97307 /* AddTodoViewController.m */; };
 		3BCB55AE208F703700C5362F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB55AD208F703700C5362F /* AppDelegate.m */; };
 		3BCB55B1208F703700C5362F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB55B0208F703700C5362F /* ViewController.m */; };
 		3BCB55B4208F703700C5362F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCB55B2208F703700C5362F /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B11ED09208FC73F00D97307 /* AddTodoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTodoViewController.h; sourceTree = "<group>"; };
+		3B11ED0A208FC73F00D97307 /* AddTodoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTodoViewController.m; sourceTree = "<group>"; };
 		3BCB55A9208F703700C5362F /* Every.Do - A basic todo list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Every.Do - A basic todo list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCB55AC208F703700C5362F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3BCB55AD208F703700C5362F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				3BCB55C6208F760600C5362F /* ToDoTableViewCell.m */,
 				3BCB55C8208F967700C5362F /* DetailViewController.h */,
 				3BCB55C9208F967700C5362F /* DetailViewController.m */,
+				3B11ED09208FC73F00D97307 /* AddTodoViewController.h */,
+				3B11ED0A208FC73F00D97307 /* AddTodoViewController.m */,
 			);
 			path = "Every.Do - A basic todo list";
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			files = (
 				3BCB55C7208F760600C5362F /* ToDoTableViewCell.m in Sources */,
 				3BCB55B1208F703700C5362F /* ViewController.m in Sources */,
+				3B11ED0B208FC73F00D97307 /* AddTodoViewController.m in Sources */,
 				3BCB55BC208F703B00C5362F /* main.m in Sources */,
 				3BCB55AE208F703700C5362F /* AppDelegate.m in Sources */,
 				3BCB55C4208F71DA00C5362F /* Todo.m in Sources */,

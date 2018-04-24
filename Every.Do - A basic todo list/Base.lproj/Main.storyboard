@@ -96,6 +96,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Mhc-5q-lQY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6M5-lu-3W7"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7qG-He-cA2" secondAttribute="trailing" constant="20" symbolic="YES" id="AuE-fL-EXh"/>
                             <constraint firstItem="sdh-qt-twS" firstAttribute="centerY" secondItem="sSJ-OO-FSM" secondAttribute="centerY" id="BC2-WC-1bM"/>
                             <constraint firstItem="sSJ-OO-FSM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DwQ-mE-RxQ"/>
                             <constraint firstItem="Mhc-5q-lQY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eyu-T4-3hb"/>
@@ -103,14 +104,21 @@
                             <constraint firstItem="Mhc-5q-lQY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="Y5S-fE-3W8"/>
                             <constraint firstItem="7qG-He-cA2" firstAttribute="centerY" secondItem="sSJ-OO-FSM" secondAttribute="centerY" id="YCw-l7-Oew"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mhc-5q-lQY" secondAttribute="bottom" id="adz-aD-8sW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sdh-qt-twS" secondAttribute="trailing" constant="16" id="d9x-Aw-CRX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sdh-qt-twS" secondAttribute="trailing" id="d9x-Aw-CRX"/>
                             <constraint firstItem="7qG-He-cA2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="e1h-ZF-3AJ"/>
                             <constraint firstItem="Mhc-5q-lQY" firstAttribute="top" secondItem="sSJ-OO-FSM" secondAttribute="bottom" constant="9" id="fVj-Nv-DZk"/>
                             <constraint firstItem="sdh-qt-twS" firstAttribute="baseline" secondItem="sSJ-OO-FSM" secondAttribute="baseline" id="nzc-0P-43q"/>
+                            <constraint firstItem="sdh-qt-twS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="294" id="v2E-mO-GeR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Todo List" id="vor-W3-0aC"/>
+                    <navigationItem key="navigationItem" title="Todo List" id="vor-W3-0aC">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="guU-mF-Upz">
+                            <connections>
+                                <segue destination="mhb-N1-Z2X" kind="show" id="cqq-AX-jH3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Mhc-5q-lQY" id="59r-3w-cDJ"/>
                         <segue destination="gJS-4S-i5a" kind="show" identifier="detailSegue" id="hOV-tM-MxS"/>
@@ -119,6 +127,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="-76.011994002998506"/>
+        </scene>
+        <!--Add Todo View Controller-->
+        <scene sceneID="HMY-up-3u5">
+            <objects>
+                <viewController id="mhb-N1-Z2X" customClass="AddTodoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="acq-ow-Riw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="t1W-kV-pBb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HP3-h5-9ZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="704"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="rZQ-vX-Es6">
