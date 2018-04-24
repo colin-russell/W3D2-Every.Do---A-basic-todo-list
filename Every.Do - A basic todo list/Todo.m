@@ -10,11 +10,14 @@
 
 @implementation Todo
 
-- (instancetype)init
+- (instancetype)initWithTitle:(NSString *)title description:(NSString *)description andPriorityNumber:(NSInteger)priorityNumber
 {
     self = [super init];
     if (self) {
-        
+        _title = title;
+        _todoDescription = description;
+        _priorityNumber = priorityNumber;
+        _isCompleted = NO;
     }
     return self;
 }

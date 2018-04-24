@@ -13,4 +13,7 @@
 @property (nonatomic, strong) NSString *todoDescription;
 @property (nonatomic) NSInteger priorityNumber;
 @property (nonatomic) BOOL isCompleted;
+
+- (instancetype)initWithTitle:(NSString *)title description:(NSString *)description andPriorityNumber:(NSInteger)priorityNumber;
+
 @end

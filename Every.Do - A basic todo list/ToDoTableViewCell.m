@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.titleLabel = _titleLabel;
+    self.priorityLabel = _priorityLabel;
+    self.taskDescriptionLabel = _taskDescriptionLabel;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
