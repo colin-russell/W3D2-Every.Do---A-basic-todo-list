@@ -20,6 +20,9 @@
     self.titleLabel.text = self.todo.title;
     self.priorityLabel.text = [NSString stringWithFormat:@"%lu", self.todo.priorityNumber];
     self.taskDescriptionLabel.text = self.todo.todoDescription;
+    if (self.todo.isCompleted) {
+        self.backgroundColor = [UIColor greenColor];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

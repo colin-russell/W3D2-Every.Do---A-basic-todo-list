@@ -64,8 +64,12 @@
     [self performSegueWithIdentifier:@"detailSegue" sender:todo];
 }
 - (void)handleCellSwipe:(UISwipeGestureRecognizer *)sender {
+    NSMutableArray *tempArray = self.todoArray;
     ToDoTableViewCell *cell = (ToDoTableViewCell *)sender.view;
-    cell.backgroundColor = [UIColor greenColor];
+    [tempArray removeObject:cell.todo];
+    cell.todo.isCompleted = YES;
+    [tempArray addObject:cell.todo];
+
     [self.tableView reloadData];
     
 }
