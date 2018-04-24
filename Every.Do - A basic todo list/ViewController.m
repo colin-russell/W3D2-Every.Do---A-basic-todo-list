@@ -53,7 +53,8 @@
 }
 
 - (void)handleCellTap:(UITapGestureRecognizer *)sender {
-    Todo *todo = (Todo *)sender.view;
+    ToDoTableViewCell *cell = (ToDoTableViewCell *)sender.view;
+    Todo *todo = cell.todo;
     NSLog(@"todo: %@", todo.todoDescription);
     [self performSegueWithIdentifier:@"detailSegue" sender:todo];
 }
