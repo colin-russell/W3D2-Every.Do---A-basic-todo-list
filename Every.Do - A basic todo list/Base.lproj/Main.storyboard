@@ -130,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="-76.011994002998506"/>
         </scene>
-        <!--Add New Todo-->
+        <!--Add Todo-->
         <scene sceneID="HMY-up-3u5">
             <objects>
                 <viewController id="mhb-N1-Z2X" customClass="AddTodoViewController" sceneMemberID="viewController">
@@ -189,6 +189,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69I-yT-Tdh">
+                                <rect key="frame" x="76" y="122" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -216,7 +223,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t1W-kV-pBb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Todo" id="4AU-WD-gGC"/>
+                    <navigationItem key="navigationItem" title="Add Todo" id="o7M-Dw-Xqp">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="usg-e8-WSl">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="mhb-N1-Z2X" id="Kgq-tb-Adv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="OPc-34-bcf" id="0ud-2m-MnI"/>
+                        <outlet property="detailsTextField" destination="6R0-MS-Hot" id="DI8-xY-jwh"/>
+                        <outlet property="priorityNumberTextField" destination="3OX-b5-0Rn" id="n18-P1-XgG"/>
+                        <outlet property="titleTextField" destination="69I-yT-Tdh" id="wLh-lG-Kbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP3-h5-9ZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
