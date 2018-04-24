@@ -117,7 +117,7 @@
                     <navigationItem key="navigationItem" title="Todo List" id="vor-W3-0aC">
                         <barButtonItem key="rightBarButtonItem" title="+" id="guU-mF-Upz">
                             <connections>
-                                <segue destination="mhb-N1-Z2X" kind="show" id="cqq-AX-jH3"/>
+                                <segue destination="mhb-N1-Z2X" kind="show" identifier="todoSegue" id="cqq-AX-jH3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

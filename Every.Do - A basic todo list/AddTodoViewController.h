@@ -8,6 +8,13 @@
 
 #import "ViewController.h"
 
-@interface AddTodoViewController : ViewController
+@class AddTodoViewController;
+@class Todo;
 
+@protocol ToDoDelegate<NSObject>
+- (void)addTodo:(Todo *)newTodo;
+@end
+
+@interface AddTodoViewController : UIViewController
+@property (nonatomic, weak)id<ToDoDelegate>delegate;
 @end

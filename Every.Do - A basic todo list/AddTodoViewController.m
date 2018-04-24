@@ -29,6 +29,11 @@
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
     Todo *newTodo = [[Todo alloc]initWithTitle:self.titleTextField.text description:self.descriptionTextField.text details:self.detailsTextField.text andPriorityNumber:[self.priorityNumberTextField.text intValue]];
     
+   
+    [self.delegate addTodo:newTodo];
+    NSLog(@"TODO title: %@", newTodo.title);
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 

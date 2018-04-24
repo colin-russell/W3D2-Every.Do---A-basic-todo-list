@@ -10,8 +10,9 @@
 #import "Todo.h"
 #import "ToDoTableViewCell.h"
 #import "DetailViewController.h"
+#import "AddTodoViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<ToDoDelegate>
 
 @property (nonatomic, strong)NSMutableArray* todoArray;
 @end
@@ -52,11 +53,14 @@
     return self.todoArray.count;
 }
 
+
+#pragma mark - Handle Tap Gesture
 - (void)handleCellTap:(UITapGestureRecognizer *)sender {
     ToDoTableViewCell *cell = (ToDoTableViewCell *)sender.view;
     Todo *todo = cell.todo;
     [self performSegueWithIdentifier:@"detailSegue" sender:todo];
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
@@ -65,6 +69,19 @@
     detailViewController.todo = sender;
     }
     
+    if ([segue.identifier containsString:@"todoSegue"]) {
+        AddTodoViewController *addTodoViewController = (AddTodoViewController *)segue.destinationViewController;
+        addTodoViewController.delegate = self;
+    }
 }
+
+#pragma mark - Delegate Method
+- (void)addTodo:(Todo *)newTodo {
+    [self.todoArray addObject:newTodo];
+    NSLog(@"todo title: %@", newTodo.title);
+    [self.tableView reloadData];
+}
+
+
 
 @end
