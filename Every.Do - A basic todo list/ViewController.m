@@ -46,6 +46,9 @@
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleCellTap:)];
     [cell addGestureRecognizer:tapGestureRecognizer];
     
+    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleCellSwipe:)];
+    [cell addGestureRecognizer:swipeGestureRecognizer];
+    
     return cell;
 }
 
@@ -54,14 +57,20 @@
 }
 
 
-#pragma mark - Handle Tap Gesture
+#pragma mark - Handle Gestures
 - (void)handleCellTap:(UITapGestureRecognizer *)sender {
     ToDoTableViewCell *cell = (ToDoTableViewCell *)sender.view;
     Todo *todo = cell.todo;
     [self performSegueWithIdentifier:@"detailSegue" sender:todo];
 }
+- (void)handleCellSwipe:(UISwipeGestureRecognizer *)sender {
+    ToDoTableViewCell *cell = (ToDoTableViewCell *)sender.view;
+    cell.backgroundColor = [UIColor greenColor];
+    [self.tableView reloadData];
+    
+}
 
-
+#pragma mark - Segues
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier containsString:@"detailSegue"]) {
@@ -77,8 +86,7 @@
 
 #pragma mark - Delegate Method
 - (void)addTodo:(Todo *)newTodo {
-    [self.todoArray addObject:newTodo];
-    NSLog(@"todo title: %@", newTodo.title);
+    [self.todoArray insertObject:newTodo atIndex:0];
     [self.tableView reloadData];
 }
 
