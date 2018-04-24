@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Todo.h"
 #import "ToDoTableViewCell.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -26,24 +27,23 @@
     [self.todoArray addObject:[[Todo alloc] initWithTitle:@"two" description:@"two description" andPriorityNumber:2]];
     [self.todoArray addObject:[[Todo alloc] initWithTitle:@"three" description:@"three description" andPriorityNumber:3]];
     [self.todoArray addObject:[[Todo alloc] initWithTitle:@"four" description:@"four description" andPriorityNumber:4]];
-    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"five" description:@"five description" andPriorityNumber:5]];
-    
+  
 }
-
 
 
 #pragma mark - ToDoTableViewDataSource
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     ToDoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"todoCell" forIndexPath:indexPath];
-
+    
+    // create my custom cells for each of the elements in the array
     if (indexPath.row < self.todoArray.count) {
-        
         Todo *todo = [self.todoArray objectAtIndex:indexPath.row];
-        cell.titleLabel.text = todo.title;
-        cell.priorityLabel.text = [NSString stringWithFormat:@"%lu", todo.priorityNumber];
-        cell.taskDescriptionLabel.text = todo.todoDescription;
+        cell.todo = todo;
     }
+    [cell setLabels];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleCellTap:)];
+    [cell addGestureRecognizer:tapGestureRecognizer];
     
     return cell;
 }
@@ -52,5 +52,17 @@
     return self.todoArray.count;
 }
 
+- (void)handleCellTap:(UITapGestureRecognizer *)sender {
+    Todo *todo = (Todo *)sender.view;
+    NSLog(@"todo: %@", todo.todoDescription);
+    [self performSegueWithIdentifier:@"detailSegue" sender:todo];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *detailViewController = (DetailViewController*)segue.destinationViewController;
+    
+    detailViewController.todo = sender;
+    
+}
 
 @end

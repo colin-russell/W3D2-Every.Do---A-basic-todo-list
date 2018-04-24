@@ -13,9 +13,13 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.titleLabel = _titleLabel;
-    self.priorityLabel = _priorityLabel;
-    self.taskDescriptionLabel = _taskDescriptionLabel;
+    
+}
+
+- (void)setLabels {
+    self.titleLabel.text = self.todo.title;
+    self.priorityLabel.text = [NSString stringWithFormat:@"%lu", self.todo.priorityNumber];
+    self.taskDescriptionLabel.text = self.todo.todoDescription;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

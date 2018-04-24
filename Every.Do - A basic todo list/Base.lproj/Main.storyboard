@@ -52,7 +52,7 @@
                                             <constraints>
                                                 <constraint firstItem="jkE-mL-a9m" firstAttribute="top" secondItem="iW8-Aa-w8Q" secondAttribute="top" constant="11" id="8UK-BO-jM0"/>
                                                 <constraint firstItem="vbO-1s-mzX" firstAttribute="leading" secondItem="iW8-Aa-w8Q" secondAttribute="leading" constant="15" id="C6k-zq-VmW"/>
-                                                <constraint firstItem="jkE-mL-a9m" firstAttribute="leading" secondItem="vbO-1s-mzX" secondAttribute="trailing" constant="67" id="Ts9-k5-zF9"/>
+                                                <constraint firstItem="jkE-mL-a9m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vbO-1s-mzX" secondAttribute="trailing" id="Ts9-k5-zF9"/>
                                                 <constraint firstItem="vbO-1s-mzX" firstAttribute="centerY" secondItem="iW8-Aa-w8Q" secondAttribute="centerY" id="WcC-xa-uy4"/>
                                                 <constraint firstAttribute="trailing" secondItem="oVm-7s-glR" secondAttribute="trailing" constant="15" id="XXz-9l-EYb"/>
                                                 <constraint firstItem="oVm-7s-glR" firstAttribute="centerY" secondItem="iW8-Aa-w8Q" secondAttribute="centerY" id="Xdm-Vn-Tm5"/>
@@ -87,11 +87,42 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Mhc-5q-lQY" id="59r-3w-cDJ"/>
+                        <segue destination="gJS-4S-i5a" kind="presentation" identifier="detailSegue" id="hOV-tM-MxS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="-69.715142428785612"/>
+            <point key="canvasLocation" x="-1" y="-76"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="rZQ-vX-Es6">
+            <objects>
+                <viewController id="gJS-4S-i5a" userLabel="Detail View Controller" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jlm-v9-F5B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-Ka-SCE">
+                                <rect key="frame" x="166" y="333" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fzo-Ka-SCE" firstAttribute="centerX" secondItem="6DV-QT-B9J" secondAttribute="centerX" id="nkS-f1-0wG"/>
+                            <constraint firstItem="fzo-Ka-SCE" firstAttribute="centerY" secondItem="6DV-QT-B9J" secondAttribute="centerY" id="ywz-oc-aYZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6DV-QT-B9J"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="fzo-Ka-SCE" id="qf2-ca-8LW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUS-nE-3nn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823.20000000000005" y="-76.011994002998506"/>
         </scene>
     </scenes>
 </document>

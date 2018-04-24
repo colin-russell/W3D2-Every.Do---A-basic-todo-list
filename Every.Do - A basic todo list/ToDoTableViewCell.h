@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Todo.h"
 
 @interface ToDoTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *taskDescriptionLabel;
+@property (nonatomic, strong) Todo *todo;
 
+- (void)setLabels;
 @end
