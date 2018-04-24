@@ -14,6 +14,7 @@
 		3BCB55B9208F703B00C5362F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCB55B7208F703B00C5362F /* LaunchScreen.storyboard */; };
 		3BCB55BC208F703B00C5362F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB55BB208F703B00C5362F /* main.m */; };
 		3BCB55C4208F71DA00C5362F /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB55C3208F71DA00C5362F /* Todo.m */; };
+		3BCB55C7208F760600C5362F /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB55C6208F760600C5362F /* ToDoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		3BCB55BB208F703B00C5362F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BCB55C2208F71DA00C5362F /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		3BCB55C3208F71DA00C5362F /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		3BCB55C5208F760600C5362F /* ToDoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
+		3BCB55C6208F760600C5362F /* ToDoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				3BCB55BB208F703B00C5362F /* main.m */,
 				3BCB55C2208F71DA00C5362F /* Todo.h */,
 				3BCB55C3208F71DA00C5362F /* Todo.m */,
+				3BCB55C5208F760600C5362F /* ToDoTableViewCell.h */,
+				3BCB55C6208F760600C5362F /* ToDoTableViewCell.m */,
 			);
 			path = "Every.Do - A basic todo list";
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCB55C7208F760600C5362F /* ToDoTableViewCell.m in Sources */,
 				3BCB55B1208F703700C5362F /* ViewController.m in Sources */,
 				3BCB55BC208F703B00C5362F /* main.m in Sources */,
 				3BCB55AE208F703700C5362F /* AppDelegate.m in Sources */,
