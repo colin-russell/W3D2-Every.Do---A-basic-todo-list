@@ -9,7 +9,11 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priorityNumberLabel;
+@property (weak, nonatomic) IBOutlet UINavigationItem *titleBarLabel;
 
 
 @end
@@ -18,8 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _detailsLabel.text = self.todo.todoDescription;
-    
+    [self.titleBarLabel setTitle:self.todo.title];
+    _descriptionLabel.text = self.todo.todoDescription;
+    _detailsLabel.text = self.todo.todoDetails;
+    _priorityNumberLabel.text = [NSString stringWithFormat:@"%lu", self.todo.priorityNumber];
+    [self.descriptionLabel sizeToFit];
 }
 
 @end

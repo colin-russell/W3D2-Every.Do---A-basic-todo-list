@@ -23,10 +23,10 @@
     
     self.todoArray = [NSMutableArray new];
     // create ToDo objects
-    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"one" description:@"one description" andPriorityNumber:1]];
-    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"two" description:@"two description" andPriorityNumber:2]];
-    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"three" description:@"three description" andPriorityNumber:3]];
-    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"four" description:@"four description" andPriorityNumber:4]];
+    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"Dog" description:@"Walk my dog" details:@"walk my dog down my street at 4pm! don't forget to pick up the poop!" andPriorityNumber:1]];
+    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"two" description:@"two description" details:@"" andPriorityNumber:2]];
+    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"three" description:@"three description" details:@"" andPriorityNumber:3]];
+    [self.todoArray addObject:[[Todo alloc] initWithTitle:@"four" description:@"four description" details:@"" andPriorityNumber:4]];
   
 }
 
@@ -55,7 +55,6 @@
 - (void)handleCellTap:(UITapGestureRecognizer *)sender {
     ToDoTableViewCell *cell = (ToDoTableViewCell *)sender.view;
     Todo *todo = cell.todo;
-    NSLog(@"todo: %@", todo.todoDescription);
     [self performSegueWithIdentifier:@"detailSegue" sender:todo];
 }
 

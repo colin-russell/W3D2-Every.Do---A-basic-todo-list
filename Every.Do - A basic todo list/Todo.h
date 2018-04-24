@@ -11,9 +11,10 @@
 @interface Todo : NSObject
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *todoDescription;
+@property (nonatomic, strong) NSString *todoDetails;
 @property (nonatomic) NSInteger priorityNumber;
 @property (nonatomic) BOOL isCompleted;
 
-- (instancetype)initWithTitle:(NSString *)title description:(NSString *)description andPriorityNumber:(NSInteger)priorityNumber;
+- (instancetype)initWithTitle:(NSString *)title description:(NSString *)description details:(NSString *)details andPriorityNumber:(NSInteger)priorityNumber;
 
 @end
