@@ -76,12 +76,10 @@
 
 #pragma mark - Segues
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
     if ([segue.identifier containsString:@"detailSegue"]) {
     DetailViewController *detailViewController = (DetailViewController*)segue.destinationViewController;
     detailViewController.todo = sender;
     }
-    
     if ([segue.identifier containsString:@"todoSegue"]) {
         AddTodoViewController *addTodoViewController = (AddTodoViewController *)segue.destinationViewController;
         addTodoViewController.delegate = self;
@@ -93,7 +91,5 @@
     [self.todoArray insertObject:newTodo atIndex:0];
     [self.tableView reloadData];
 }
-
-
 
 @end

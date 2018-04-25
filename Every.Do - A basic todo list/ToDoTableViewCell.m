@@ -22,6 +22,8 @@
     self.taskDescriptionLabel.text = self.todo.todoDescription;
     if (self.todo.isCompleted) {
         self.backgroundColor = [UIColor greenColor];
+    } else {
+        self.backgroundColor = [UIColor clearColor];
     }
 }
 
